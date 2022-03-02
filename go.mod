@@ -3,7 +3,7 @@ module gitee.com/zhaochuninhefei/fabric-config-gm
 go 1.17
 
 require (
-	gitee.com/zhaochuninhefei/gmgo v0.0.3
+	gitee.com/zhaochuninhefei/gmgo v0.0.4
 	github.com/Knetic/govaluate v3.0.0+incompatible
 	github.com/golang/protobuf v1.5.2
 	github.com/hyperledger/fabric-protos-go v0.0.0-20220202165055-956c75de7b17
@@ -21,4 +21,5 @@ require (
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
 
+// gitee.com/zhaochuninhefei/gmgo => /home/zhaochun/work/sources/gm-zc/gmgo
 replace github.com/hyperledger/fabric-protos-go => github.com/hyperledger/fabric-protos-go v0.0.0-20200506201313-25f6564b9ac4

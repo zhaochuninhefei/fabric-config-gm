@@ -1,7 +1,7 @@
 cloud.google.com/go v0.26.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
 cloud.google.com/go v0.34.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
-gitee.com/zhaochuninhefei/gmgo v0.0.4 h1:yH3SJi2zpsjBJJIRAR0Taq1fhGTPP6MGe90vbcKLpQE=
-gitee.com/zhaochuninhefei/gmgo v0.0.4/go.mod h1:kQv8Tn9hZ4d1WV0zpHmMDaCq+syJmrAvHQbgezTqEwI=
+gitee.com/zhaochuninhefei/gmgo v0.0.5 h1:jt3iUxFeCnt1T1k1hFFRKk1dvSWxxReVXslFZlOlc4k=
+gitee.com/zhaochuninhefei/gmgo v0.0.5/go.mod h1:kQv8Tn9hZ4d1WV0zpHmMDaCq+syJmrAvHQbgezTqEwI=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/Knetic/govaluate v3.0.0+incompatible h1:7o6+MAPhYTCF0+fdvoz1xDedhRb4f6s9Tn1Tt7/WTEg=
 github.com/Knetic/govaluate v3.0.0+incompatible/go.mod h1:r7JcOSlj0wfOMncg0iLm8Leh48TZaKVeNIfJntJ2wa0=

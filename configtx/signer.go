@@ -8,14 +8,12 @@ package configtx
 
 import (
 	"crypto"
-	"crypto/ecdsa"
 	"crypto/rand"
-	"encoding/asn1"
 	"encoding/pem"
 	"fmt"
 	"io"
-	"math/big"
 
+	"gitee.com/zhaochuninhefei/gmgo/sm2"
 	"gitee.com/zhaochuninhefei/gmgo/x509"
 	"github.com/golang/protobuf/proto"
 	cb "github.com/hyperledger/fabric-protos-go/common"
@@ -30,9 +28,9 @@ type SigningIdentity struct {
 	MSPID       string
 }
 
-type ecdsaSignature struct {
-	R, S *big.Int
-}
+// type ecdsaSignature struct {
+// 	R, S *big.Int
+// }
 
 // Public returns the public key associated with this signing
 // identity's certificate.
@@ -47,41 +45,44 @@ func (s *SigningIdentity) Public() crypto.PublicKey {
 // for more detail.
 func (s *SigningIdentity) Sign(reader io.Reader, digest []byte, opts crypto.SignerOpts) (signature []byte, err error) {
 	switch pk := s.PrivateKey.(type) {
-	case *ecdsa.PrivateKey:
-		rr, ss, err := ecdsa.Sign(reader, pk, digest)
-		if err != nil {
-			return nil, err
-		}
+	// case *ecdsa.PrivateKey:
+	// 	rr, ss, err := ecdsa.Sign(reader, pk, digest)
+	// 	if err != nil {
+	// 		return nil, err
+	// 	}
 
-		// ensure Low S signatures
-		sig := toLowS(
-			pk.PublicKey,
-			ecdsaSignature{
-				R: rr,
-				S: ss,
-			},
-		)
+	// 	// ensure Low S signatures
+	// 	sig := toLowS(
+	// 		pk.PublicKey,
+	// 		ecdsaSignature{
+	// 			R: rr,
+	// 			S: ss,
+	// 		},
+	// 	)
 
-		return asn1.Marshal(sig)
+	// 	return asn1.Marshal(sig)
+	case *sm2.PrivateKey:
+		signature, err = pk.Sign(reader, digest, opts)
+		return
 	default:
 		return nil, fmt.Errorf("signing with private key of type %T not supported", pk)
 	}
 }
 
-// toLows normalizes all signatures to a canonical form where s is at most
-// half the order of the curve. By doing so, it compliant with what Fabric
-// expected as well as protect against signature malleability attacks.
-func toLowS(key ecdsa.PublicKey, sig ecdsaSignature) ecdsaSignature {
-	// calculate half order of the curve
-	halfOrder := new(big.Int).Div(key.Curve.Params().N, big.NewInt(2))
-	// check if s is greater than half order of curve
-	if sig.S.Cmp(halfOrder) == 1 {
-		// Set s to N - s so that s will be less than or equal to half order
-		sig.S.Sub(key.Params().N, sig.S)
-	}
+// // toLows normalizes all signatures to a canonical form where s is at most
+// // half the order of the curve. By doing so, it compliant with what Fabric
+// // expected as well as protect against signature malleability attacks.
+// func toLowS(key ecdsa.PublicKey, sig ecdsaSignature) ecdsaSignature {
+// 	// calculate half order of the curve
+// 	halfOrder := new(big.Int).Div(key.Curve.Params().N, big.NewInt(2))
+// 	// check if s is greater than half order of curve
+// 	if sig.S.Cmp(halfOrder) == 1 {
+// 		// Set s to N - s so that s will be less than or equal to half order
+// 		sig.S.Sub(key.Params().N, sig.S)
+// 	}
 
-	return sig
-}
+// 	return sig
+// }
 
 // CreateConfigSignature creates a config signature for the the given configuration
 // update using the specified signing identity.

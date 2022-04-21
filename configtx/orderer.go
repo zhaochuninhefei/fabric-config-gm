@@ -16,11 +16,11 @@ import (
 	"time"
 
 	"gitee.com/zhaochuninhefei/fabric-config-gm/configtx/orderer"
+	cb "gitee.com/zhaochuninhefei/fabric-protos-go-gm/common"
+	ob "gitee.com/zhaochuninhefei/fabric-protos-go-gm/orderer"
+	eb "gitee.com/zhaochuninhefei/fabric-protos-go-gm/orderer/etcdraft"
 	"gitee.com/zhaochuninhefei/gmgo/x509"
 	"github.com/golang/protobuf/proto"
-	cb "github.com/hyperledger/fabric-protos-go/common"
-	ob "github.com/hyperledger/fabric-protos-go/orderer"
-	eb "github.com/hyperledger/fabric-protos-go/orderer/etcdraft"
 )
 
 const (

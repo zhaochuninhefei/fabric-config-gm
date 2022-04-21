@@ -24,11 +24,11 @@ import (
 	"strconv"
 	"strings"
 
+	cb "gitee.com/zhaochuninhefei/fabric-protos-go-gm/common"
+	mb "gitee.com/zhaochuninhefei/fabric-protos-go-gm/msp"
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes"
 	"github.com/golang/protobuf/ptypes/timestamp"
-	cb "github.com/hyperledger/fabric-protos-go/common"
-	mb "github.com/hyperledger/fabric-protos-go/msp"
 )
 
 // Channel is a channel configuration.

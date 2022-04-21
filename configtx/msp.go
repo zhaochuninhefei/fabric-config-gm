@@ -16,11 +16,11 @@ import (
 	"time"
 
 	"gitee.com/zhaochuninhefei/fabric-config-gm/configtx/membership"
+	cb "gitee.com/zhaochuninhefei/fabric-protos-go-gm/common"
+	mb "gitee.com/zhaochuninhefei/fabric-protos-go-gm/msp"
 	"gitee.com/zhaochuninhefei/gmgo/sm2"
 	"gitee.com/zhaochuninhefei/gmgo/x509"
 	"github.com/golang/protobuf/proto"
-	cb "github.com/hyperledger/fabric-protos-go/common"
-	mb "github.com/hyperledger/fabric-protos-go/msp"
 )
 
 // MSP is the configuration information for a Fabric MSP.
@@ -319,7 +319,7 @@ func parsePrivateKeyFromBytes(priv []byte) (crypto.PrivateKey, error) {
 		return nil, fmt.Errorf("no PEM data found in private key[% x]", priv)
 	}
 
-	privateKey, err := x509.ParsePKCS8PrivateKey(pemBlock.Bytes, nil)
+	privateKey, err := x509.ParsePKCS8PrivateKey(pemBlock.Bytes)
 	if err != nil {
 		return nil, fmt.Errorf("failed parsing PKCS#8 private key: %v", err)
 	}
@@ -452,7 +452,7 @@ func pemEncodeX509Certificate(cert *x509.Certificate) []byte {
 }
 
 func pemEncodePKCS8PrivateKey(priv *sm2.PrivateKey) ([]byte, error) {
-	privBytes, err := x509.MarshalSm2PrivateKey(priv, nil)
+	privBytes, err := x509.MarshalPKCS8PrivateKey(priv)
 	if err != nil {
 		return nil, fmt.Errorf("marshaling PKCS#8 private key: %v", err)
 	}

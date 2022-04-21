@@ -9,8 +9,8 @@ package mspext
 import (
 	"fmt"
 
+	"gitee.com/zhaochuninhefei/fabric-protos-go-gm/msp"
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric-protos-go/msp"
 )
 
 type MSPConfig struct{ *msp.MSPConfig }

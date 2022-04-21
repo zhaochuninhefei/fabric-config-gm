@@ -9,8 +9,8 @@ package commonext
 import (
 	"fmt"
 
+	"gitee.com/zhaochuninhefei/fabric-protos-go-gm/common"
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric-protos-go/common"
 )
 
 type Policy struct{ *common.Policy }

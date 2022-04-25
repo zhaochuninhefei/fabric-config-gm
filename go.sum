@@ -802,6 +802,7 @@ github.com/urfave/cli v1.22.5/go.mod h1:Gos4lmkARVdJ6EkW0WaNv/tZAAMe9V7XWyB60NtX
 github.com/valyala/bytebufferpool v1.0.0/go.mod h1:6bBcMArwyJ5K/AmCkWv1jt77kVWyCJ6HpOuEn7z0Csc=
 github.com/valyala/fasttemplate v1.0.1/go.mod h1:UQGH1tvbgY+Nz5t2n7tXsz52dQxojPUpymEIMZ47gx8=
 github.com/weppos/publicsuffix-go v0.13.1-0.20210123135404-5fd73613514e/go.mod h1:HYux0V0Zi04bHNwOHy4cXJVz/TQjYonnF6aoYhj+3QE=
+github.com/weppos/publicsuffix-go v0.15.1-0.20210511084619-b1f36a2d6c0b h1:FsyNrX12e5BkplJq7wKOLk0+C6LZ+KGXvuEcKUYm5ss=
 github.com/weppos/publicsuffix-go v0.15.1-0.20210511084619-b1f36a2d6c0b/go.mod h1:HYux0V0Zi04bHNwOHy4cXJVz/TQjYonnF6aoYhj+3QE=
 github.com/xanzy/go-gitlab v0.31.0/go.mod h1:sPLojNBn68fMUWSxIJtdVVIP8uSBYqesTfDUseX11Ug=
 github.com/xanzy/ssh-agent v0.2.1/go.mod h1:mLlQY/MoOhWBj+gOGMQkOeiEvkx+8pJSI+0Bx9h2kr4=
@@ -818,7 +819,9 @@ github.com/ziutek/mymysql v1.5.4/go.mod h1:LMSpPZ6DbqWFxNCHW77HeMg9I646SAhApZ/wK
 github.com/zmap/rc2 v0.0.0-20131011165748-24b9757f5521/go.mod h1:3YZ9o3WnatTIZhuOtot4IcUfzoKVjUHqu6WALIyI0nE=
 github.com/zmap/zcertificate v0.0.0-20180516150559-0e3d58b1bac4/go.mod h1:5iU54tB79AMBcySS0R2XIyZBAVmeHranShAFELYx7is=
 github.com/zmap/zcrypto v0.0.0-20210123152837-9cf5beac6d91/go.mod h1:R/deQh6+tSWlgI9tb4jNmXxn8nSCabl5ZQsBX9//I/E=
+github.com/zmap/zcrypto v0.0.0-20210511125630-18f1e0152cfc h1:zkGwegkOW709y0oiAraH/3D8njopUR/pARHv4tZZ6pw=
 github.com/zmap/zcrypto v0.0.0-20210511125630-18f1e0152cfc/go.mod h1:FM4U1E3NzlNMRnSUTU3P1UdukWhYGifqEsjk9fn7BCk=
+github.com/zmap/zlint/v3 v3.1.0 h1:WjVytZo79m/L1+/Mlphl09WBob6YTGljN5IGWZFpAv0=
 github.com/zmap/zlint/v3 v3.1.0/go.mod h1:L7t8s3sEKkb0A2BxGy1IWrxt1ZATa1R4QfJZaQOD3zU=
 go.etcd.io/bbolt v1.3.2/go.mod h1:IbVyRI1SCnLcuJnV2u8VeU0CEYM7e686BmAb1XKL+uU=
 go.etcd.io/bbolt v1.3.3/go.mod h1:IbVyRI1SCnLcuJnV2u8VeU0CEYM7e686BmAb1XKL+uU=

@@ -4,13 +4,14 @@ go 1.17
 
 require (
 	gitee.com/zhaochuninhefei/fabric-protos-go-gm v0.0.1
-	gitee.com/zhaochuninhefei/gmgo v0.0.12
+	gitee.com/zhaochuninhefei/gmgo v0.0.14
 	github.com/Knetic/govaluate v3.0.1-0.20171022003610-9aa49832a739+incompatible
 	github.com/golang/protobuf v1.5.2
 	github.com/onsi/gomega v1.18.1
 )
 
 require (
+	gitee.com/zhaochuninhefei/zcgolog v0.0.7 // indirect
 	github.com/kr/pretty v0.2.1 // indirect
 	github.com/kr/text v0.2.0 // indirect
 	golang.org/x/crypto v0.0.0-20220214200702-86341886e292 // indirect

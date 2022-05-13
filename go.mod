@@ -11,7 +11,7 @@ require (
 )
 
 require (
-	gitee.com/zhaochuninhefei/zcgolog v0.0.9 // indirect
+	gitee.com/zhaochuninhefei/zcgolog v0.0.12 // indirect
 	github.com/kr/pretty v0.2.1 // indirect
 	github.com/kr/text v0.2.0 // indirect
 	golang.org/x/crypto v0.0.0-20220214200702-86341886e292 // indirect
